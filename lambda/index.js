@@ -31,8 +31,7 @@ exports.handler = function(event, context) {
             return rp(options)
                 .then(
                     function(processedResult) {
-                        console.log(processedResult);
-                        var message = processedResult.message;
+                        var message = processedResult['message'];
 
                         return message;
                     }
